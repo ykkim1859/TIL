@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블실습 실수 + 선생님 검토</title>
+    <link rel="stylesheet" href="table.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        td{
+            text-align: left;
+            padding: 20px;
+        }
+        th{
+            text-align: center;
+            padding: 20px;
+        }
+
+        caption {
+            font-size: 20px;
+            margin: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>1차 실수 부분</h1>
+    <table>
+        <caption>현재 상영중인 영화정보</caption>
+        <br>
+        <tr>
+            <th rowspan="2">구분</th>
+            <th colspan="4">영화 정보
+            <th>
+
+        </tr>
+
+        <tr>
+            <th>영화 제목</th>
+            <th>세부 정보
+            <th>
+            <th>등급</th>
+            <th>상영 시간</th>
+
+        </tr>
+
+        <tr>
+            <td rowspan="3"><img src="./img/알라딘.jpeg" alt="" width="100px">
+
+            </td>
+            <td rowspan="3">알라딘
+            <td>
+            <td>모험,가족,판타지</td>
+            <td rowspan="3">전체 관람가</td>
+            <td rowspan="3">128분</td>
+        </tr>
+
+        <tr>
+            <td>미국</td>
+
+        </tr>
+
+        <tr>
+            <td>2019.05.23 개봉</td>
+
+        </tr>
+
+        <tr>
+            <td rowspan="3"><img src="./img/기생충.jpeg" alt="" width="100px">
+                <a href="C:/Users/82103/Desktop/기생충.jpeg"></a>
+            </td>
+            <td rowspan="3">기생충
+            <td>
+            <td>드라마</td>
+            <td rowspan="3">15세 관람가</td>
+            <td rowspan="3">131분</td>
+        </tr>
+
+        <tr>
+            <td>한국</td>
+
+        </tr>
+
+        <tr>
+            <td>2019.05.30 개봉</td>
+
+        </tr>
+
+        <tr>
+            <th>출처</th>
+            <th colspan="4"><a href="https://movie.naver.com/">네이버 영화정보</a></th>
+
+        </tr>
+    </table>
+
+    <h1>선생님이 고쳐주신 부분</h1>
+    <table>
+        <tr>
+            <th rowspan="2"></th>
+            <th colspan="4"></th>
+        </tr>
+        <tr>
+
+            <td>영화 제목</td>
+            <td>세부 정보</td>
+            <td>등급</td>
+            <td>상영 시간</td>
+        </tr>
+        <tr>
+            <td rowspan="3">사진</td>
+            <td rowspan="3"></td>
+            <td></td>
+            <td rowspan="3"></td>
+            <td rowspan="3"></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="3">사진</td>
+            <td rowspan="3"></td>
+            <td></td>
+            <td rowspan="3"></td>
+            <td rowspan="3"></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td>출처</td>
+            <td colspan="4"></td>
+
+        </tr>
+    </table>
+</body>
+</html>

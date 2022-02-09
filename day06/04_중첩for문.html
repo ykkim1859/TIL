@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중첩for문</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+/*
+    중첩for문 : for문 안에 for문 존재
+
+     for (초기화식; 조건식; 증강식){
+
+        for (초기화식; 조건식; 증강식){
+
+            수행문;
+        }
+
+    }
+
+
+*/
+
+    for (var i = 1; i <= 3; i++) {
+        document.write("내부for문 시작<br/>");
+        for (var j = 1; j <= 2; j++) {
+            document.write("i값 : " + i + "</br>");
+            document.write("j값 : " + j + "</br>");
+        }
+        document.write("내부for문 끝<br/><br/>");
+    }   
+
+// 외부 for문에서 선언한 i값을 내부 for문에서 사용 가능
+// 내부 for문에서 사용한 j값은 외부 for문에서 사용 불가
+
+
+// 구구단 만들기
+
+    for (var i = 2; i <= 9; i++) {
+        document.write("구구단 " + i + "단<br/>");
+        for (var j = 1; j <= 9; j++) {
+            document.write(i + " x " + j + " = " + (i * j) + "<br/>");
+        }
+        document.write("<br/>");
+    }
+
+
+// 홀수단 출력
+    
+        for (var i = 2; i <= 9; i++) {
+                if (i % 2 == 0) {
+                    continue;
+                }
+                document.write("구구단 " + i + "단<br/>"); {
+                    for (var j = 1; j <= 9; j++) {
+                        document.write(i + " x " + j + " = " + (i * j) + "<br/>");
+                    } document.write("<br/>");
+                }
+            }
+
+    
+
+</script>
+</html>

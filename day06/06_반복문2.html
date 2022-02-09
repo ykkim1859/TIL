@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문(While)</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+/*
+    while문 : 특별한 반복횟수가 정해져있지 않음
+
+    초기화식
+    while(반복조건){
+        수행문;
+        증감식;
+    }
+
+*/
+ 
+    // 1부터 10까지 출력 (while문 사용)
+    var i=1;
+    while(i<=10){
+        console.log(i);
+        i++;
+    }
+
+    var run = true; //실행여부
+    var cnt = 0;    //실행횟수 count : cnt
+
+    // while(true) : 반복문 실행
+    // while(false) : 반복문 종료
+
+    while(run);{
+
+        var dice = Math.floor(Math.randon() * 6 + 1);
+        // Math.floor() : 소숫점 1번재 자리부터 버림 -> 정수로 만드는 함수
+
+        // Math.randon() : 0보다 크거나 같고, 1보다 작은 숫자
+        // 0.0000 ~ 0.99999.. 까지
+
+        // Math.randon() * 6 : 0보다 크거나 같고, 6보다 작은 숫자
+        // Math.randon() * 6 + 1 : 1보다 크거나 같고, 7보다 작은 숫자
+        
+        // Math.floor(Math.random() * 6 + 1) : 1부터 6까지의 숫자 중 무작위로 선정
+        cnt++;  //증감식 아님
+
+        if(dice==5){
+            run = false;
+            // run = false 되면 반복문 종료
+        } 
+        console.log('주사위값 : ' + dice);
+    }
+    console.log('주사위를 던진 횟수 : ' + cnt);
+
+</script>
+</html>

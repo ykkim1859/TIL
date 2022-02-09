@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break문&Continue문</title>
+</head>
+<body>
+
+    <h2>Break문</h2>
+    <p id="break1">break문 내용</p>
+
+    <hr>
+
+    <h2>Continue문</h2>
+    <p id="continue1">continue문 내용</p>
+
+</body>
+<script>
+
+    // break문
+    // 반복문을 이용해서 1부터 10까지 출력 (document.write 이용)
+    // document.write() : body부분의 마지막 요소 뒤에 출력
+
+        var text1 = "";  // 왼 : 변수를 선언해주는 영역 / 오 : 문자열 타입의 초기값 대입
+
+    // 1부터 10까지 합
+    // sum = sum + i;
+    // sum += i;
+
+    // text1 = 1 2 3 4 5 6 7 8 9 10
+
+    for(var i=1; i<=10; i++){
+        // break : 멈추는 작업
+        // 반복문을 실행하다가 break문 실행되면 반복문 종료
+        // i가 6일 때 break문 실행
+        if(i==6){
+            break;
+        }
+
+        text1 += "Break Number is " + i + ".<br/> ";
+    }
+
+    // document.write(text1);
+    document.getElementById("break1").innerHTML = text1;
+    // document.getElementById("break1") : body부분에서 요소의 id를 "break1"로 지정해 준 영역
+    // .innerHTML = text1; : text1(문자열변수)의 내용을 출력해라
+
+
+
+    // continue문 : 점프, 건너뛰다(주어진 조건일 때 반복문을 실행하지 않고) => 증감식으로 이동
+
+    var text2 = "";
+
+    for(var i=1; i<=10; i++){
+        // 3의 배수일 때 건너뛰기
+        if(i%3==0){
+            continue;
+        }
+        text2 += "Continue Number is " + i + ".<br/>";
+    }
+
+    document.getElementById("continue1").innerHTML = text2;
+
+
+</script>
+</html>

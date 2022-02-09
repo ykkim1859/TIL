@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- head -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ykkim1859">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>변수(variable)</title>
+</head>
+
+<!-- body -->
+
+<body>
+    <div class="div4">ABC</div>
+
+</body>
+
+
+<!-- script -->
+<script>
+    // 스크립트(script) : 간단한 언어로 작성한 짧은 명령어 등을 의미
+    // 자바스크립트(JavaScript) : 스크립트 언어 + 웹에서 사용하는 언어
+
+    var number1 = 10;
+    var number2 = "10";
+    var number3 = true;
+
+    var number4 = number1 > 11;
+    var number5 = number1 < 11;
+    // number4, 5의 값과 타입 console창에 출력하기
+    console.log("number4 : " + number4, "number4 타입 : " + typeof (number4));
+    console.log("number5 : " + number5, "number5 타입 : " + typeof (number5))
+
+
+    // 변수(variable) var : 변하는 수 (데이터) / 데이터 타입 알려주는 역할
+    // 데이터 타입 : number(숫자형), string(문자형), boolean(논리형)
+    // boolean : 참(true)과 거짓(false)을 판별하기 위한 데이터 타입
+
+
+    // 위에 var로 선언해 준 변수들을 console.log() 이용하여 출력해보기
+    console.log("콘솔에 출력됩니다!");
+    console.log("</br>number1 : " + number1);
+    console.log("</br>number2 : " + number2);
+    console.log("</br>number3 : " + number3);
+
+    // 변수의 데이터 타입 알아보기
+    console.log("number1 타입 : " + typeof (number1));
+    console.log("number1 타입 : " + typeof (number2));
+    console.log("number1 타입 : " + typeof (number3));
+
+    // script에서 선언한 변수를 body(html)에 출력해보기
+    document.write("웹페이지에 출력됩니다!");
+    document.write("</br><h1>number1 : " + number1);
+    document.write("</br></h1>number2 : " + number2);
+    document.write("</br>number3 : " + number3);
+
+    // 변수이름
+    // 1. 카멜(낙타)표기법 : 시작은 소문자, 다른 뜻의 단어가 나타날 경우 대문자를 사용하여 표기
+    //  ex) 학생번호 = 학생(stu) + 번호(num) => stuNum
+    var stuNum = 1;
+    // 2. 영문자, 숫자, 특수문자( 언더바(_), 달러($)만 사용 가능 )
+    var nam#e = 'inchoriya';
+    var nam_e = 'in';
+    var nam!e = 'in';
+    var nam$e = 'nameValue';
+    // 3. 변수명은 숫자로 시작할 수 없음
+    var 123 = 123;
+    // 4. 변수명은 예약어(var, document, console)로 사용할 수 없음
+    var var = 10;
+    var document = 'incho';
+
+
+    
+
+
+</script>
+
+</html>

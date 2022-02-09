@@ -1,0 +1,98 @@
+프론트엔드 개발 : 웹페이지(인터넷 페이지)를 시각화해서 보여주는 것
+
+HTML : Hyper Text Markup Language : 페이지의 제목, 문단, 표, 이미지, 동영상 등 웹의 구조를 담당
+                                                     markup language : 태그로 이루어진 언어 / <> : 태그
+CSS : Cascading Style Sheets : 실제 화면에 표시되는 방법 / 색상, 크기, 폰트, 레이아웃을 지정해 콘텐츠를 꾸며주는 시각적인 표현을 담당
+JS : JavaScript : 콘텐츠를 바꾸고 움직이는 등 페이지를 동작시키는 동적처리를 담당
+세 개가 모두 합쳐져야 웹페이지 개발 가능!
+
+- 주석 : <!--  --> 실제로 코드에 적용되지 않고, 코드를 설명하는 글
+- 요소(Element) : <태그>내용</태그>
+           시작(열린)태그  요소의 내용(Contents)  종료(닫힌)태그
+- whitespace : 가로 또는 세로로 여백을 주는 문자 / 탭, 줄바꿈, 띄어쓰기(스페이스) 등등 / 마크업은 whitespace문자 무시, 한개의 공백으로 처리
+
+[단축키]
+- 글씨 크기 설정 : Ctrl + +/-
+- 저장 : Ctrl + S
+- 실행 : Alt + L/O
+- 정렬 : Ctrl + A (범위지정) -> Ctrl + K + F (정렬)
+
+[기본구조]
+<!DOCTYPE html> -------- 현재 작성하는 문서가 HTML5 문서임을 알려줌 / 생략 가능하나 하위호환성을 위해 작성 권장
+<html lang="en"> -------- html태그 : 문서 전체의 범위 / html 사용언어 (language=english), 한국어면 ko / lang은 생략 가능                
+<head> ------------------- head태그 : 문서의 정보 / 제목, 설명, 파일 위치, 스타일(CSS) 같은 웹페이지의 보이지 않는 정보 작성 범위
+    <meta charset="UTF-8"> ---------- meta태그 : HTML문서(웹페이지)에 관한 정보 / 표시방식, 제작자, 내용, 키워드 등을 검색엔진이나 브라우저에 제공
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title> --------- title태그 : 웹페이지 제목 
+</head>
+<body> ------------------- 문서의 구조 / 실제로 우리 눈에 보이는 웹페이지를 작성하는 범위
+문장태그       <p> -------------------- paragraph / 하나의 문단을 의미 / 문단 나누기
+                   </br> ------------------ breaking / 줄바꿈 / 문장 끝에 입력
+텍스트표현    <pre> ------------------ preformatted text
+제목             <h#> ------------------- 제목 수준 / 1~6까지 적용
+                   <hr/> ------------------- horizontal line / 수평선, 구분선
+다양한텍스트 <em> ------------------- 강조
+                   <strong> ---------------- 강한 강조
+                   <mark> ----------------- 하이라이트
+                   <del> ------------------- 취소선
+                   <small> ----------------- 작은 글자
+                   <sub> ------------------- 아래첨자
+                   <sup> ------------------- 윗첨자
+                   
+특수문자       '<' = &lt;
+                   '>' = &gt;
+                   '&' = &amp;
+                  '공백' = &nbsp;
+                   '©' = &copy;
+     </body>
+</html>
+
+[특수문자용어]
+     ' : 백틱(Backtick), 그레이브(Grave)
+    ~ : 틸드(Tilde), 물결표시
+    ! : 엑스클러메이션(Exclamation mark), 느낌표
+    @ : 앳(At sign), 골뱅이
+    # : 샾(Sharp), 넘버(Number sign), 우물정
+    $ : 달러(Dollar sign)
+    % : 퍼센트(Percent sign)
+    ^ : 캐럿(Caret), 웃음표시
+    & : 엠퍼센드(Ampersand), 앤드표시
+    * : 에스터리스크(Asterisk), 별표
+    - : 하이픈(Hyphen), 대시(Dash), 마이너스, 바
+    _ : 언더스코어(Underscore), 로대시(LowDash), 밑줄, 언더바
+    = : 이퀄(Equals sign), 같다표시
+    " : 쿼테이션(Quotation mark), 큰따옴표
+    ' : 아포스트로피(Apostrophe), 작은따옴표
+    : : 콜론(Colon), 땡땡
+    ; : 세미콜론(Semicolon)
+    , : 콤마(Comma), 쉼표
+    . : 닷(Dot), 피리어드(Period), 점
+    ? : 퀘스천(Question mark), 물음표
+    / : 슬래시(Slash)
+    | : 버티컬바(Vertical bar) ----------- 엔터위
+    \ : 백슬래시(Backslash), 역슬래시 ----- 엔터위
+    () : 퍼렌서시스(Parenthesis), 소괄호
+    {} : 브레이스(Brace), 중괄호
+    [] : 브래킷(Bracket), 대괄호
+    <> : 앵글브래킷(Angle Bracket), 꺽쇠괄호
+    + : 플러스, 더하기
+
+[스타일]
+자식요소의 스타일이 우선적으로 적용된다.
+태그에 직접 스타일을 적용한 것이 우선적으로 적용된다.
+<태그 속성="속성값">내용</태그> ------------------------------- 속성 : attribute, 값 : value
+
+
+
+border : ctrl + / ----------------------------- 선종류, 선굵기, 선색깔
+        선종류 : solid dotted, dashed, double, groove, ridge, inset, outset, none, hidden
+
+css 파일 불러오기 : <link rel="stylesheet" href="style3.css" type="text/css">
+
+
+
+
+
+
+

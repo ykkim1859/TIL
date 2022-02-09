@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인라인요소와 블록요소</title>
+    <style>
+        .test1{
+            background-color: darkolivegreen;
+        }
+        .a1{
+            background-color: darkorange;
+        }
+        .t1{
+            background-color: darkred;
+            width: 70%;
+        }
+        span{background-color: darksalmon;}
+    </style>
+</head>
+<body>
+ 
+    <h2 class="test1">블록요소</h2>
+    <p class="test1">p태그는 블록요소입니다.</p>
+    <div class="test1">div태그도 블록요소입니다.</div>
+
+    <hr>
+
+    <h2>인라인요소</h2>
+    <strong>이 요소는 strong요소</strong>
+    <a class="a1" href="#">링크가 있는 a요소 역시 인라인요소</a>
+    <span>span요소</span>
+    <p id="t1">이것은 <span>p태그 안에 있는 span태그</span></p>
+
+    <h2>블록요소와 인라인요소의 규칙</h2>
+    <ul type="square">
+        <li>대부분의 요소는 같은 형태의 다른 요소 포함 가능
+            <br>(블록요소 안에 블록, 인라인요소 안에 인라인)</li>
+        <li>대부분의 블록요소는 다른 인라인요소 포함 가능</li>
+        <li>하지만, 인라인요소는 블록요소 포함X</li>
+    </ul>
+</body>
+</html>

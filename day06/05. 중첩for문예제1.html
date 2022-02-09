@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중첩for문 예제1</title>
+   
+</head>
+<body>
+
+</body>
+<script>
+
+/*
+    Q. 중첩for문 이용하여 
+    
+    *
+    **
+    ***
+    ****
+    *****
+
+    출력하기 (규칙 찾기)
+*/
+
+// i=j / i = 행 / j = * 갯수 / 1층에서 1개, 2층에서 2개~
+
+        for (var i = 1; i <= 5; i++) {
+            for (var j = 1; j <= i; j++) {
+                document.write("*")
+            }
+            document.write("<br/>")
+        }
+
+    /*
+            *
+           ***
+          *****
+         *******
+        *********
+    */
+
+    // i = 행 / j = 공백 / k = *갯수
+    // j = 5-i / k = i*2-1 / 관계 파악이 중요 / i 안에서 k, j 이루어져
+
+        for (var i = 1; i <= 5; i++) {
+            for (var j = 1; j <= 5-i; j++) {
+                document.write("&nbsp");
+            }
+            for (var k=1; k <= i*2-1; k++){
+                document.write("*");
+            } 
+            document.write("<br/>")
+        } 
+
+</script>
+</html>

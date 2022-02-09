@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리연산자</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+/* 
+    4. 논리연산자 (이항연산자) : 참 / 거짓을 판별하기 위한 연산자
+
+    (1) AND연산 : &&
+     - 조건A && 조건B : 조건A와 조건B가 모두 true(참)여야 결과가 true / A, B 중 하나라도 false(거짓) 있으면 결과는 false
+
+    (2) OR연산 : ||
+     - A || B : A, B 중 하나라도 true(참) 있으면 true
+     - A, B 모두 false여야 결과 false
+
+    (3) NOT연산 : !
+     - !A : A가 true면 결과는 false, A가 false면 결과가 true
+
+*/
+
+    // AND연산
+    var result;
+
+    result = true && true;
+    console.log('true && true => ' + result);  //true
+
+    result = true && false;
+    console.log('true && false => ' + result);  //false
+
+    result = false && false;
+    console.log('false && false => ' + result);  //false
+
+    // OR연산
+    var result;
+
+    result = true || true;
+    console.log('true && true => ' + result);  //true
+
+    result = true || false;
+    console.log('true && false => ' + result);  //true
+
+    result = false || false;
+    console.log('false && false => ' + result);  //false
+
+    // NOT연산
+    var boolVar = true;
+    result = !boolVar;
+    console.log('!boolVar : ' + result);  //false
+
+    result = !result;
+    console.log('!result(!!boolVar) : ' + result);  //true
+
+
+
+
+
+
+</script>
+</html>

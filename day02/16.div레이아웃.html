@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div레이아웃</title>
+    <style>
+        body {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        div {
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        #header {
+            background-color: salmon;
+            color: cornsilk;
+            width: 100%;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 5px;
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 10px;
+          
+        }
+
+        #content {
+            background-color: sandybrown;
+            width: 74%;
+            height: 300px;
+            line-height: 300px;
+            margin-bottom: 10px;
+            float: left;
+        }
+
+        #nav {
+            background-color: seagreen;
+            width: 25%;
+            height: 300px;
+            line-height: 300px;
+            margin-bottom: 10px;
+            float: right;
+            /* 오른쪽에 띄우겠다 */
+        }
+
+        #footer {
+            background-color: steelblue;
+            width: 100%;
+            height: 100px;
+            line-height: 100px;
+            clear: both;
+            /* float의 영향 받지 않겠다 */
+
+        }
+        
+        li{
+            background-color: salmon; 
+            color: crimson;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 5px;
+            display: inline-table;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 20px;
+            padding: 20px;
+           
+        }
+        li:hover{
+            background-color: salmon;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="wrap">
+
+        <div id="header">
+            <ul>
+                <li><a href="http://www.naver.com">Naver</a></li>
+                <li><a href="https://blog.naver.com/ykkim1859">daily윧</a></li>
+                <li><a href="https://mail.naver.com/">Naver Mail</a></li>
+                <li><a href="http://www.youtube.com">YouTube</a></li>
+            </ul>
+        
+        </div>
+
+        <div id="content">
+            <p>div id = "content"</p>
+        </div>
+
+        <div id="nav">
+            <p>div id = "nav"</p>
+        </div>
+
+        <div id="footer">
+            <p>div id = "footer"</p>
+        </div>
+
+    </div>
+
+    
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문예제3</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+// 월(month)을 입력받아서 해당하는 월의 날짜(day)를 구하라
+
+var month = prompt('1~12월 중 택해서 입력하세요')
+
+switch(month){
+    case "1월" :
+    case "3월" :
+    case "5월" :
+    case "7월" :
+    case "8월" :
+    case "10월" :
+    case "12월" :
+        alert("31일");
+        break;
+    case "2월" :
+        alert("28일");
+        break;
+    case "4월" :
+    case "6월" :
+    case "9월" :
+    case "11월" :
+        alert("30일");
+        break;
+    default:
+        alert("다시 입력하세요");
+        break;
+}
+
+
+// 선생님 버전
+
+var month  = Number(prompt('1~12월 중 택해서 입력하세요'));
+var day = 0;
+
+switch(month){
+    case 1 : case 3 : case 5 : case 7 : case 8 : case 10 : case 12 :    
+        day = 31;
+        break;
+    case 2 :
+        day = 28;
+        break;
+    case 4 : case 6 : case 9 : case 11 :
+        day = 30;
+        break;
+    default:
+        alert("다시 입력하세요");
+        break;
+}
+
+if(month>=1 && month<=12){
+    alert('입력하신 ' + month + '월은 '+ day + "일 까지 있습니다");
+}
+</script>
+</html>

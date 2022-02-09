@@ -1,0 +1,93 @@
+input{
+    background-color: darkkhaki;
+}
+
+input:focus{
+    background-color: darkolivegreen;
+}
+
+a{
+    color: salmon;
+    text-decoration: none;
+    /* 밑줄 쳐지는 스타일 지울 수 있음 */
+}
+
+a:visited{
+    color: sandybrown;
+}
+/* 방문한 적 있는 사이트에 대한 스타일 */
+
+a:hover{
+    color: seagreen;
+    text-decoration: underline;
+}
+/* 마우스를 요소 위에 올렸을 때의 스타일 */
+
+a:active{
+    color: slateblue;
+    text-decoration: none;
+    background-color: slategrey;
+}
+/* 요소를 클릭할 때의 스타일  */
+
+body{
+    color: steelblue;
+}
+
+h2{
+    color: orange;
+}
+
+.ex{
+    color: green;
+}
+/* class="ex" */
+
+p.ex{
+    color: hotpink;
+}
+/* p태그 안에 calss가 ex인 요소의 스타일 */
+
+li{
+    width: 19%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    float: left;
+    list-style: none;
+    /* list-style을 변경 가능 / 아무것도 안 보이게 하는 속성값은 none */
+    box-sizing: border-box;
+    /* box-sizing 속성을 border-box로 지정하면 테두리를 포함한 크기를 지정 가능 */
+
+}
+
+ul{
+    border-top: 2px solid steelblue;
+    border-bottom: 2px solid steelblue;
+    width: 98%;
+    overflow: hidden;
+}
+
+div{
+    border: 3px solid red;
+    height: 200px;
+}
+
+.div1{
+    overflow: hidden;
+}
+/* 크기가 넘치는 부분은 숨겨짐 */
+
+.div2{
+    overflow: scroll;
+}
+
+.div3{
+    overflow: auto;
+}
+/* 넘치는 부분에만 스크롤 */
+
+.div4{
+    margin: 10px;
+    padding: 10px;
+}

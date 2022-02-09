@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문(switch)</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+/*
+    조건문 switch문의 문법
+    
+    switch(조건변수){
+        case 변수값1 : 
+            조건변수의 값이 변수값 1일 때 실행;
+            break;
+        case 변수값2 : 
+            조건변수의 값이 변수값 2일 때 실행;
+            break;
+        case 변수값n : 
+            조건변수의 값이 변수값 n일 때 실행;
+            break;
+        default : 
+            case의 변수값이 어떤 조건에도 맞지 않을 때 (else랑 비슷)
+            braek;
+    }
+
+    (1) switch문과 짝꿍 - case
+    (2) break문 : 다음 case문 실행하지 않고 switch문 빠져나가기 위해 사용 / break문이 없으면 다음 case 연속 실행
+
+*/
+
+    var season = prompt("좋아하는 계절을 입력해주세요");
+
+    switch(season){
+        case "봄" : 
+            document.write("좋아하는 계절은 봄입니다");
+            break;
+        case "여름" : 
+            document.write("좋아하는 계절은 여름입니다");
+            break;
+        case "가을" : 
+            document.write("좋아하는 계절은 가을입니다");
+            break;
+        case "겨울" : 
+            document.write("좋아하는 계절은 겨울입니다");
+            break;
+        default:
+            document.write("잘못 입력하셨습니다");
+            break;
+    }
+
+    //위에 주어진 switch문을 if문으로 바꿔보기
+
+    if(season=="봄"){
+        alert("좋아하는 계절은 봄입니다");
+    } else if(season=="여름"){
+        alert("좋아하는 계절은 여름입니다");
+    } else if(season=="가을"){
+        alert("좋아하는 계절은 가을입니다");
+    } else if(season=="겨울"){
+        alert("좋아하는 계절은 겨울입니다");
+    } else{
+        alert("잘못 입력하셨습니다");
+    }
+
+</script>
+</html>

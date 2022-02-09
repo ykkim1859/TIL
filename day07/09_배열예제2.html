@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열예제2</title>
+</head>
+<body>
+    <fieldset>
+        <legend>성적 계산 (Name 활용)</legend>
+        <input type="text" name="kor" placeholder="1번학생 국어점수">
+        <input type="text" name="kor" placeholder="2번학생 국어점수">
+        <input type="text" name="kor" placeholder="3번학생 국어점수">
+        <input type="button" value="성적 계산" onclick="score()">
+    </fieldset>
+</body>
+<script>
+    function score(){
+        let arrKor = document.getElementsByName("kor");
+
+        console.log(typeof arrKor);
+        // console.log(Array.isArray(arrKor));
+        let sum = 0;
+        
+        sum = parseInt(arrKor[0].value) + parseInt(arrKor[0].value) + parseInt(arrKor[0].value);
+
+        console.log("총점 : " + sum);
+        console.log("평균 : " + sum / 3);
+    }
+
+</script>
+</html>

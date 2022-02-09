@@ -1,0 +1,167 @@
+*  컬러의 종류
+-  html은 140개의 컬러 이름 지원
+-  html의 color는 RGB(Red, Green, Blue)를 사용하는 빛의 삼원색
+-  Red 
+   #FF0000 -------------------------------------  1 2 3 4 5 6 7 8 9 10 A B C D E F
+    rgb(255, 0, 0) -------------------------------  red, green, blue 각각 0~255까지 가능
+
+*  테이블
+-  tr  :  가로 행
+-  td  :  세로 열
+-  th  :  제목 / 가운데 정렬 + 굵게(bold)
+-  border-collpase  :  테이블 선을 합쳐줌
+<table>
+        <tr>  --------------------------------------- 1행
+            <td>1행1열</td> ---------------------- 1열
+            <td>1행2열</td> ---------------------- 2열
+            <td>1행3열</td> ---------------------- 3열
+        </tr>
+
+        <tr>
+            <td>2행1열</td> 
+            <td>2행2열</td>
+            <td>2행3열</td>
+        </tr>
+    </table> 
+
+*  열병합(colspan)
+-  병합하면 밑에 하나 삭제
+
+*  행병합
+
+
+*  테이블구조
+-  caption  :  테이블 제목
+-  thead  :  
+-  tbody  :  
+-  tfoor  :  
+
+*  파비콘(favicon)
+-  즐겨찾기  +  아이콘
+
+*  로그인
+-  input type
+-  form  :  데이터를 다른페이지로 이동하기 위한 태그
+-  action  :  이동할 페이지 주소
+-  method  :  데이터를 전송할 방식 GET/POST (사용하지 않으면 기본값GET)
+                  get  :  주소창에 데이터 출력  /  post  :  정보 출력 X (보안)
+<form action="http://www.naver.com" method="post">
+    <table>
+        <tr>
+            <td colspan="2">로그인</td>
+        </tr>
+
+        <tr>
+            <td>아이디</td>
+            <td><input type="text" name="userId" placeholder="아이디를 입력해주세요"></td>
+        </tr>
+
+        <tr>
+            <td>비밀번호</td>
+            <td><input type="password" name="userPw" placeholder="비밀번호를 입력해주세요"></td>
+        </tr>
+
+        <tr>
+            <td colspan="2"><input type="submit" value="로그인"></td>
+        </tr>
+    </table>
+</form>
+
+<form action="http://www.goole.com">
+    <fieldset>
+        <legend>로그인</legend>
+        아이디 : <input type="text" name="userId" placeholder="아이디를 입력해주세요"><br>
+        비밀번호 : <input type="password" name="userPw" placeholder="비밀번호를 입력해주세요">
+        <br><input type="submit" value="로그인">
+    </fieldset>
+
+*  입력태그
+<form action="http://www.naver.com" method="get">
+
+        <h2>type="text" & type="password"</h2>
+        <h3>텍스트 & 암호타입</h3>
+        아이디 : <input type="text" name="userId"><br>
+        비밀번호 : <input type="password" name="userPw"><br>
+        
+        <hr>
+
+        <h2>type="button"</h2>
+        <h3>버튼타입</h3>
+        <input type="button" value="버튼1" onclick="msg()">
+        <input type="button" value="버튼2" onclick="location.href='http://www.naver.com'">
+        
+        <hr/>
+
+        <h2>type="radio"</h2>
+        <h3>라디오 버튼</h3>
+        성별 : 
+        여자 <input type="radio" name="gender" value="여"> 
+        남자 <input type="radio" name="gender" value="남">
+        <!-- type이랑 name 값은 같아야 하고, value는 달라야 함
+            그래야 하나만 선택 가능 -->
+        
+        <hr/>
+
+        <h2>type="checkbox"</h2>
+        <h3>체크박스 버튼</h3>
+        일정 : 
+        월<input type="checkbox" name="days" value="월">
+        화<input type="checkbox" name="days" value="화">
+        수<input type="checkbox" name="days" value="수">
+        목<input type="checkbox" name="days" value="목">
+        금<input type="checkbox" name="days" value="금">
+        토<input type="checkbox" name="days" value="토">
+        일<input type="checkbox" name="days" value="일">
+
+        <hr/>
+
+        <h2>type="hidden"</h2>
+        <h3>숨김 정보</h3>
+        <input type="hidden" name="hiddenValue" value="숨김정보1">
+
+        <hr>
+
+        <h2>type="file"</h2>
+        <h3>파일 업로드</h3>
+        <input type="file" name="fileName" value="파일선택">
+
+        <hr>
+
+        <h2>type="date"</h2>
+        <h3>날짜선택</h3>
+        <input type="date" name="date">
+
+        <hr>
+
+        <h2>type="color"</h2>
+        <h3>색상선택</h3>
+        <input type="color" name="color">
+
+        <hr>
+
+        <h2>type="email"</h2>
+        <h3>이메일</h3>
+        <input type="email" name="userEmail">
+            <hr>
+        <input type="submit" value="제출">
+        <input type="reset" value="초기화">
+
+        <hr>
+
+        <h2>select버튼</h2>
+        <select name="car">
+            <option value="hd">현대</option>
+            <option value="kia">기아</option>
+            <option value="tsla">테슬라</option>
+            <option value="benz">벤츠</option>
+        </select>
+
+        <!-- select랑 option은 짝꿍 -->
+
+
+
+
+
+
+    </form>
+

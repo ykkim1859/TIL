@@ -1,0 +1,12 @@
+body{
+    background-color: black;
+    color: brown;
+}
+h1{
+    font-size: 10px;
+    color: cadetblue;
+}
+p{
+    color: coral;
+    border: solid 2px violet;
+}

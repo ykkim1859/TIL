@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블실습(김유경)</title>
+    <link rel="stylesheet" href="table.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        td{
+            text-align: left;
+            padding: 20px;
+        }
+        th{
+            text-align: center;
+            padding: 20px;
+        }
+
+        caption {
+            font-size: 20px;
+            margin: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <caption>현재 상영중인 영화정보</caption>
+        <tr>
+            <th rowspan="2">구분</th>
+            <th colspan="4">영화 정보</th>
+        </tr>
+
+        <tr>
+            <th>영화 제목</th>
+            <th>세부 정보</th>
+            <th>등급</th>
+            <th>상영 시간</th>
+        </tr>
+
+        <tr>
+            <td rowspan="3">
+                <a href="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F10%2F7e%2F78%2F107e78517e4065e40572de6a48dedd95.jpg&type=sc960_832">
+                    <img src="./img/알라딘.jpeg" alt="알라딘" width="150px">
+                </a></td>
+            <td rowspan="3">알라딘</td>
+            <td>모험,가족,판타지</td>
+            <td rowspan="3">전체 관람가</td>
+            <td rowspan="3">128분</td>
+        </tr>
+
+        <tr>
+            <td>미국</td>
+        </tr>
+
+        <tr>
+            <td>2019.05.23 개봉</td>
+        </tr>
+
+        <tr>
+            <td rowspan="3"><a href="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA4MjBfMTg0%2FMDAxNjI5NDE4NDU3MDMx.69BYiHhG90Tz2mgsx9ni2U3RDxREvmuS2eUwacLNDTEg.ggkB6ni0qihXXlE8UazFbmUU8szwIOJ5P1OLUNtusHgg.JPEG.chungchup%2F004701.jpg&type=sc960_832">
+                <img src="./img/기생충.jpeg" alt="기생충" width="150px">
+            </a></td>
+            <td rowspan="3">기생충</td>
+            <td>드라마</td>
+            <td rowspan="3">15세 관람가</td>
+            <td rowspan="3">131분</td>
+        </tr>
+
+        <tr>
+            <td>한국</td>
+        </tr>
+
+        <tr>
+            <td>2019.05.30 개봉</td>
+        </tr>
+
+        <tr>
+            <th>출처</th>
+            <th colspan="4"><a href="https://movie.naver.com/">네이버 영화정보</a></th>
+        </tr>
+    </table>
+
+</body>
+
+</html>

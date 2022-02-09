@@ -1,0 +1,250 @@
+<스타일 적용>
+
+- 글씨체 설정 : style="font-family: '  ';"
+
+- 스타일 적용에는 세 종류 있음 - 인라인, 내장, 링크
+
+- 태그별로 스타일 적용 방식 : 인라인 방식
+<p style="color: red;">p태그1</p>
+ <p style="font-size: 50px;">p태그2</p>
+ <p style="font-family: '궁서';">p태그3</font></p> 
+
+- class 이용해서 style태그 스타일을 적용 방식 : 내장 방식
+<title>스타일적용</title>
+    <style>
+      .p4{
+          color: blue;
+      }
+      .p5{
+          font-size: 5px;
+      }
+      .p6{
+          font-family: '고딕';
+      }
+      #id1{
+          font-size: 100px;
+      }
+
+<body>
+    <p class="p4">p태그4</p>
+    <p class="p5">p태그5</p>
+    <p class="p6">p태그6</p>
+
+    <p id="id1">p태그 id속성 적용</p>
+</body>
+*class(.) : 반복적으로 같은 스타일 적용 위해 쓰이는 속성
+*id(#) : html문서 내에서 한번만 사용 가능
+
+<링크걸기>
+- <a href="https://www.naver.com/">Naver페이지로 이동</a> 
+- <a href="01_스타일적용.html">html파일 실행</a>
+- a(anchor) : a태그, 링크태그 / 페이지로 이동, 파일 실행 가능
+
+<링크타겟>
+<a href="https://www.google.co.kr/" target="_self">Google로 이동</a><br/>
+ ------------> target"_self" : 생략 가능 (기본값)
+<a href="https://www.google.co.kr/" target="_blank">Google로 이동</a>
+ ------------> target="_blank" : 새 탭에서 페이지 실행
+
+<문서내부링크>
+<h1 id="top"><a href="#section">공지사항으로 이동</a></h1>
+    <p>인천일보 아카데미</p>
+    <p>파이어베이스를 활용한 스마트 개발자 양성과정</p>
+    <hr/>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h2 id="section">공지사항</h2>
+    <hr/>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br
+    br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <p><a href="#top">맨위로</a></p>
+------------> href="section" : id="section"인 곳으로 이동
+
+<이미지넣기> --> img태그 사용 / 보통 상대경로 사용
+- <img src="pngtree-beach-png-image_2215226.jpg" alt="바다ㅏㅏ" width="500px">
+---------> src : 이미지 저장경로 / alt : 이미지 설명 / width : 가로 / height : 세로 / 원본비율 유지하려면 둘 중 하나만 사용
+
+- 상대경로 : 현재폴더(day02)를 기준으로 자원경로 표현 
+- 현재폴더(day02) = ./파일명
+------> <img src="./style_58d5042e102a9.jpg" alt="바다ㅏㅏ">
+          <img src="./image/pexels-photo-907485.jpeg" alt="">
+- 상위폴더(front-end) = ../파일명
+------> <img src="../day01/다운로드.jpg" alt="">
+- 하위폴더(image) = /파일명 
+
+
+- 절대경로 : 디렉토리(/) 기준으로 자원경로 표현 (보통 상대경로)
+------> <img src="C:/Users/user2/Desktop/다운로드.jpg" alt="">
+
+
+- 인터넷주소 경로 : 이미지 링크 복사
+------> <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA4MDFfMjgx%2FMDAxNjI3NzkyNTE1MTE1.s7tcqQ0yfxYTYyDcy2zK08ZzdBOoha1GVcefwTOMfuMg.CIFdQ0ts6fmXlmTEkMf6wLnSf3P-z_x4ViH0yAQQk_Ag.JPEG.dan_record%2FIMG_5667.jpg&type=ofullfill340_600" alt="인터넷주소사진">
+
+<이미지 링크걸기>
+<a href="http://www.daum.net">
+        <img src="./pngtree-beach-png-image_2215226.jpg" alt="이미지링크"> 
+    </a>
+
+<유투브스크랩>
+영상->공유->퍼가기->주소복사->붙여넣기
+
+<오디오넣기>
+   <audio src="./media/Pallet Town (Acoustic).mp3" controls>
+       브라우저에서 지원하지 않을 경우 출력되는 문구입니다.
+    </audio>
+--------> controls : 웹 브라우저에 음원재생 제어기 생성 / autoplay : 웹 브라우저에서 음원 자동 재생 / loop : 웹 브라우저에서 음원 반복 재생 / volume : 음원 볼륨 설정 (0.0~1.0)
+
+<비디오넣기>
+ <video src="./media/Lake - 67201.mp4" controls>
+        브라우저에서 재생이 불가능할 경우 출력
+    </video>
+
+<ul(Unorder List) : 순서가 없는 목록>
+- ul과 li는 짝꿍! / ul은 부모, li는 자식 / 기호로 표시
+    <ul>
+        <li>항목</li>
+        <li>항목</li>
+    </ul>
+
+- 목록의 모양 변경
+    <ul type="circle">~~~</ul>-------------------------------------------------------type : circle, disc, square
+
+<ol(Order List) : 순서가 있는 목록>
+- 숫자로 표시
+    <ol>
+        <li>항목</li>
+        <li>항목</li>
+    </ol>
+
+- 목록의 모양 변경
+    <ol type="1">~~~</ol>
+    <ol type="1" start="10">~~~</ol>---------------------------------------------------type : 1, A, a, I, i
+
+- 예제 --------------------------------------------------------> 부모, 자식 잘 보면서 하기
+    <h2>ol과 ul의 사용</h2>
+    <ul type="disc">
+        <li>1일차</li>
+            <ol type="A">
+                <li>HTML이란?</li>
+                <li>HTML의 기본 구조</li>
+            </ol>
+        <li>2일차
+            <ol type="a" start="2">
+                <li>CSS 스타일적용</li>
+                <li>ol과 ul을 사용한 예제</li>
+            </ol>
+        </li>
+    </ul>
+<hr/>
+    <h2>신입 사원 모집 공고</h2>
+    <p>IT계획, 개발 부서에서 함께 할 신입 사원을 모집합니다.</p><br>
+    <ul type="disc">
+        <li>모집 직군 : 웹개발, 응용프로그래밍</li> 
+        <li>직무 내용 : 스프링, 자바를 사용한 웹개발 (신입도 지원가능)</li>
+            <ul type="circle">
+                <li>개발회의</li>
+                <li>프로젝트 참여</li>
+            </ul>
+        <li>접수 마감일 : 2022. 7.21</li>
+    </ul>
+        <br>
+    <p>자세한 내용은 공지게시판을 참고해주세요</p>
+
+<리스트메뉴>
+    <title>리스트메뉴</title>
+    <style>
+        li{
+            background-color: cadetblue; 
+            color: crimson;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;       -------------------------------------- 세로 가운데 정렬 (height와 같은 값이어야 함)
+            text-align: center;       -------------------------------------- 가로 가운데 정렬
+            font-weight: bold;      -------------------------------------- 글씨 굵기
+            font-size: 15px;
+            border-radius: 5px;     -------------------------------------- 모서리 부분 둥글게
+            display: inline-block;   -------------------------------------- 한 줄 정렬 + 리스트 모양 사라짐
+        }
+        li:hover{                       -------------------------------------- li에 마우스 올렸을 때
+            background-color: crimson;
+            font-size: 20px;
+        }
+    </style>
+
+<인라인요소와 블록요소>
+- 블록요소 : 기본적으로 줄바꿈이 일어나는 형태 / 영역의 너비가 상위영역의 전체너비만큼 되는 형태 / 블록요소로는 h#, p, div태그 등이 있음
+- 인라인요소 : 블록요소와 반대되는 형태로 줄바꿈 일어나지 않는 형태 / 인라인요소로는 a, img, strong, span태그 등이 있음
+
+- 블록요소와 인라인요소의 규칙 : 대부분의 요소는 같은 형태의 다른 요소 포함 가능 (블록요소 안에 블록, 인라인요소 안에 인라인) / 대부분의 블록요소는 다른 인라인요소 포함 가능 / 하지만, 인라인요소는 블록요소 포함X
+
+<마진과 패딩>
+- margin : 요소와 요소간의 간격, 즉 바깥 여백 / padding : 요소 안, 내부 여백
+- margin: 10px 20px 30px 40px (시계방향으로 위, 오른, 아래, 왼)
+
+<div레이아웃>
+<style>
+        body{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        div{
+            text-align: center;
+            border-radius: 15px;
+        }
+        #header{
+            background-color: brown; 
+            color: cornsilk;
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 5px;
+            display: inline-table;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        #content{
+            background-color: sandybrown;
+            width: 74%;
+            height: 300px;
+            line-height: 300px;
+            margin-bottom: 10px;
+            float: left;
+        }
+        #nav{
+            background-color: seagreen;
+            width: 25%;
+            height: 300px;
+            line-height: 300px;
+            margin-bottom: 10px;
+            float: right; -------------------------------------------------- 오른쪽에 띄우겠다
+        }
+        #footer{
+            background-color: steelblue;
+            width: 100%;
+            height: 100px;
+            line-height: 100px;
+            clear: both; ------------------------------------------------- float의 영향 받지 않겠다
+        }
+    </style>
+</head>
+<body>   
+    <div id="wrap">
+        <div id="header">
+            <p>div id = "header"<p/></div>
+        
+        <div id="content">
+            <p>div id = "content"</p></div>
+
+        <div id="nav">
+            <p>div id = "nav"</p></div>
+
+        <div id="footer">
+            <p>div id = "footer"</p></div>
+    </div>
+

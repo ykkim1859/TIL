@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM기</title>
+    <style>
+        fieldset{
+            width: 300px;
+            height: 500px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend><img src="./bank.png" alt="ATM기" width="100px"></legend>
+        <input type="text" id="amount" placeholder="금액을 입력하세요." onclick="clean()"><br/><br/>
+        <!-- onclick : 해당 객체를 클릭했을 때 효과 -->
+        <img src="./deposit.webp" alt="입금" onclick="Account.deposit()" width="100px">
+        <img src="./withdraw.webp" alt="출금" onclick="Account.withdraw()" width="100px">
+        <img src="./balance.png" alt="잔액" onclick="Account.msg()" width="100px" onmouseover="clean()">
+        <!-- onmouseover : 해당 객체에 마우스가 올라왔을 때 효과 -->
+        <h4 id="result"></h4>
+    </fieldset>
+</body>
+<script>
+    let Account = {};       // Account 객체 생성
+    let amount;             // 전역변수 amount 선언
+    let amount1;            // 전역변수 amount1 선언
+    let result;             // 전역변수 result 선언
+
+    function insert(){
+        amount1 = document.getElementById("amount");    // 입력 창 전체 (<input type="text" id="amount" placeholder="금액을 입력하세요." width="300px">)
+        amount = parseInt(amount1.value);               // 입력한 금액을 문자에서 숫자로 바꾼다
+        result = document.getElementById("result");     // 입력 창 전체 (<h4 id="result"></h4>)
+    }
+
+    Account.balance = 0;        // 초기값 = 0;
+    
+    Account.deposit = function(){       // Account 안에 있는 deposit의 기능
+        insert();                       // fuction insert 호출
+        if(amount1.value==""){          // amount1 안에 값이 입력되지 않는다면
+            result.innerHTML = "=====================<br/><br/>다시 입력하세요."    // html의 result창에 입력되는 값
+        } else{                         // amount1 안에 값이 입력되었다면
+            this.balance += amount;     // 현재 잔액 + 입력된 값
+            result.innerHTML = "=====================<br/><br/>" + amount + "원 입금했습니다.";     // html의 result창에 입력되는 값
+    }
+        amount1.value="";       // amount1의 값은 없음
+        amount1.focus();        // amount1에 포커스 맞춰짐
+    }
+
+    Account.withdraw = function(){      // Account 안에 있는 withdraw의 기능
+        insert();                       // fuction insert 호출
+        if(amount1.value==""){          // amount1 안에 값이 입력되지 않는다면
+            result.innerHTML = "=====================<br/><br/>다시 입력하세요."    // html의 result창에 입력되는 값
+        } else{
+            if(this.balance>=amount){       // 잔액이 입력된 값 이상이면
+                this.balance -= amount;     // 현재 잔액 - 입력된 값
+                result.innerHTML = "=====================<br/><br/>" + amount + "원 출금했습니다.";     // html의 result창에 입력되는 값
+            } else{                         // 잔액이 입력된 값보다 적다면
+                result.innerHTML = "=====================<br/><br/>잔액이 " + (amount-this.balnce) + "원 남았습니다.";  // html의 result창에 입력되는 값
+            }
+            
+    }
+        amount1.value="";       // amount1의 값은 없음
+        amount1.focus();        // amount1에 포커스 맞춰짐
+    }
+
+    Account.msg = function(){       // Account 안에 있는 msg의 기능
+        alert("잔액 : " + this.balance + "원");     // 버튼 클릭하면 메시지에 뜨는 내용 
+    }
+
+    function clean() {              // clean 기능
+        document.getElementById("result").innerHTML="";     // html안의 result에 있는 값들이 모두 삭제
+    }
+
+
+</script>
+</html>

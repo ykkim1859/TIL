@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체예제(ATM기기)</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Account객체 생성
+    let Account = {
+       
+    };
+
+    // 객체에서 키 : balance, 값 : 0 추가
+    Account.balance = 0;
+
+    // 객체.함수 입금() deposit 함수
+    Account.deposit = function(amount){
+        this.balance += amount;
+        // this.balance : Account객체 안에 있는 key, Account.balance 의미
+        // amount : 매개변수
+        // this.balace = this.balance + amount
+        // 최종잔액 = 기존잔액 + 입금액
+    }
+
+    // 출금함수 만들어보기
+    Account.withdraw = function(amount){
+        if(this.balance >= amount){
+            this.balance -= amount
+        } else{
+            console.log("잔액이 부족합니다.");
+            // this.balace = this.balance - amount
+            // 최종잔액 = 기존잔액 - 출금액
+        }
+    }
+        
+
+    // 잔액조회 toString()
+    /*
+        [1] 기본형 함수
+            function 함수이름() {
+                실행내용;
+            }
+
+            ex) insert(); 
+                input1 = parseInt(document.getElenemtById("inpu1").value);
+                input2 = parseInt(document.getElenemtById("inpu2").value);
+        
+        [2] 반환형 함수
+            function 함수이름() {
+                return 반환값;
+            }
+
+            ex) function numFun() {
+                    return 13;
+                }
+
+                let result = numFun();
+
+                let result = 13;
+    
+    */
+
+    Account.toString = function() {
+        return "balance : " + this.balance;
+    }
+        
+    ////////////////////////////////////////////////
+
+    Account.balance = 10000;
+    console.log("Account계좌(초기) 잔액 : " + Account.balance);
+
+    Account.deposit(50000);
+    console.log("50000원 입금 후 잔액 : " + Account.balance);
+
+    Account.withdraw(50000);
+    console.log("50000원 출금 후 잔액 : " + Account.balance);
+
+    Account.withdraw(70000);
+    console.log("70000원 출금 후 잔액 : " + Account.balance);
+
+    console.log(Account.toString());
+
+    console.log(Account);
+
+</script>
+</html>

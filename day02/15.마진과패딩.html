@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마진과패딩</title>
+    <style>
+        p{
+            background-color: skyblue;
+            border: solid 3px blue;
+        }
+        .p1{
+            background-color: slateblue;
+            border: solid 3px purple;
+            margin: 10px;
+            padding: 0px;
+        }
+        .p2{
+            background-color: springgreen;
+            border: solid 3px green;
+            margin: 20px;
+            padding: 20px;
+        }
+        .p3{
+            background-color: lemonchiffon;
+            border: solid 3px yellow;
+            margin: 10px 20px 30px 40px;
+            /* 위 오른 아래 왼 (시계방향) */
+        }
+        .p4{
+            background-color: lightpink;
+            border: solid 3px red;
+            padding: 0px 20px 0px 0px;
+        }
+    </style>
+</head>
+<body>
+    <h2>마진</h2>
+    <p>background-color : "skyblue" <br> border : solid 3px blue;</p>
+    <p class="p1">margin : 10px; padding : 0px;</p>
+    <p class="p2">margin : 20px; padding : 20px;</p>
+    <p class="p3">margin : 10px 20px 30px 40px</p>
+    <p class="p4">padding : 10px 20px 30px 40px</p>
+</body>
+</html>

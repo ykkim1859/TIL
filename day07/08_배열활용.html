@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열활용</title>
+</head>
+<body>
+    <fieldset>
+        <input type="button" value="arrPush" onclick="arrPush()">
+        <input type="button" value="arrPop" onclick="arrPop()">
+        <input type="button" value="arrUnshift" onclick="arrUnshift()">
+        <input type="button" value="arrShift" onclick="arrShift()">
+    </fieldset>
+
+    <fieldset>
+        <!-- <input type="button" value="arrPush" onclick="arrPush()"> -->
+        <button onclick="arrJoin()">arrJoin</button>
+        <button onclick="arrSplit()">arrSplit</button>
+    </fieldset>
+
+</body>
+<script>
+
+    let arr = [];
+    let i = 0;
+
+    for(i=0; i<5; i++){
+        arr[i] = i+1;
+    }
+
+    // console.log(i);
+    // console.log(arr);
+
+    // arrPush : push 함수 이용해서 배열의 뒤에 값을 추가하는 기능
+    function arrPush(){
+        arr.push(i+1);
+        i++;
+        console.log(arr);
+    }
+
+    // arrPop : pop 함수 이용해서 배열의 뒤에 값을 삭제하는 기능
+    function arrPop(){
+        arr.pop(i+1);
+        console.log(arr);
+    }
+
+    // arrUnshift : unshift 함수 이용해서 배열의 앞의 값을 추가하는 기능
+    function arrUnshift(){
+        arr.unshift(i+1);
+        i++;
+
+        console.log(arr);
+    }
+
+    // arrShift : shift 함수 이용해서 앞의 값을 삭제하는 기능
+    function arrShift(){
+        arr.shift();
+        console.log(arr);
+    }
+
+    // arrJoin : join함수를 이용해서 각각의 index에 있는 데이터를 합쳐서 출력하는데
+    // join함수의 매개변수를 추가해서 합쳐줌
+    function arrJoin(){
+        let aJoin = ["010", "3271", "1849"];
+        console.log(aJoin.join("-"));
+    } 
+
+    // arrSplit : 문장을 단어별로 나눠서 출력하는 기능
+    let text = "아 오빠 너무 보고싶다 끙";
+    function arrSplit(){
+        let words = text.split(" ");
+
+        console.log("words는 배열인가? : " + Array.isArray(words));
+
+        for(let i in words){
+            console.log("words[" + i + "] : " + words[i]);
+        }
+
+    
+    }
+
+
+</script>
+</html>

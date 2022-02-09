@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열(Array)</title>
+</head>
+<body>
+    <h2>배열(Array) : 같은 타입의 데이터를 하나의 변수에 저장하는 구조</h2>
+</body>
+
+<script>
+    // 배열 선언(1)
+    let arr = [];
+    console.log(typeof arr);           //object
+
+    // 배열 선언(2)
+    let arrString = new Array();
+    console.log(typeof arrString);     //object
+
+    arr = [1, 2, 3, 4];
+    arrString = ["A", "B", "C", "D", "Z"];  
+
+    console.log(arr);                   // length : 배열의 크기/길이
+    console.log(arrString);             // index : 1이 아닌 0부터 시작
+
+    //배열 출력하기
+    console.log(arr[1]);
+    console.log(arrString[2]);
+
+    //length를 이용한 배열의 크기 확인하기
+    console.log("arr배열의 크기 : " + arr.length);
+    console.log("arrString배열의 크기 : " + arrString.length);
+
+    //isArray 사용해서 배열확인 여부 알아보기
+    console.log("arr는 배열인가? : " + Array.isArray(arr));
+    console.log("arrString은 배열인가? : " + Array.isArray(arrString));
+  
+    let arrNum = 0;
+    console.log("arrNum은 배열인가? : " + Array.isArray(arrNum));
+    
+
+</script>
+</html>

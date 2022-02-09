@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력(input)태그</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <form action="http://www.naver.com" method="get">
+
+        <h2>type="text" & type="password"</h2>
+        <h3>텍스트 & 암호타입</h3>
+        아이디 : <input type="text" name="userId"><br>
+        비밀번호 : <input type="password" name="userPw"><br>
+        
+        <hr>
+
+        <h2>type="button"</h2>
+        <h3>버튼타입</h3>
+        <input type="button" value="버튼1" onclick="msg()">
+        <input type="button" value="버튼2" onclick="location.href='http://www.naver.com'">
+        
+        <hr/>
+
+        <h2>type="radio"</h2>
+        <h3>라디오 버튼</h3>
+        성별 : 
+        여자 <input type="radio" name="gender" value="여"> 
+        남자 <input type="radio" name="gender" value="남">
+        <!-- type이랑 name 값은 같아야 하고, value는 달라야 함
+            그래야 하나만 선택 가능 -->
+        
+        <hr/>
+
+        <h2>type="checkbox"</h2>
+        <h3>체크박스 버튼</h3>
+        일정 : 
+        월<input type="checkbox" name="days" value="월">
+        화<input type="checkbox" name="days" value="화">
+        수<input type="checkbox" name="days" value="수">
+        목<input type="checkbox" name="days" value="목">
+        금<input type="checkbox" name="days" value="금">
+        토<input type="checkbox" name="days" value="토">
+        일<input type="checkbox" name="days" value="일">
+
+        <hr/>
+
+        <h2>type="hidden"</h2>
+        <h3>숨김 정보</h3>
+        <input type="hidden" name="hiddenValue" value="숨김정보1">
+
+        <hr>
+
+        <h2>type="file"</h2>
+        <h3>파일 업로드</h3>
+        <input type="file" name="fileName" value="파일선택">
+
+        <hr>
+
+        <h2>type="date"</h2>
+        <h3>날짜선택</h3>
+        <input type="date" name="date">
+
+        <hr>
+
+        <h2>type="color"</h2>
+        <h3>색상선택</h3>
+        <input type="color" name="color">
+
+        <hr>
+
+        <h2>type="email"</h2>
+        <h3>이메일</h3>
+        <input type="email" name="userEmail">
+            <hr>
+        <input type="submit" value="제출">
+        <input type="reset" value="초기화">
+
+        <hr>
+
+        <h2>select버튼</h2>
+        <select name="car">
+            <option value="hd">현대</option>
+            <option value="kia">기아</option>
+            <option value="tsla">테슬라</option>
+            <option value="benz">벤츠</option>
+        </select>
+
+        <!-- select랑 option은 짝꿍 -->
+
+
+
+
+
+
+    </form>
+</body>
+
+<script>
+    function msg(){
+        alert('버튼1을 클릭했습니다.');
+    }
+
+</script>
+</html>

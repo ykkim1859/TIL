@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수(function)</title>
+</head>
+<body>
+    <h2>함수 : 작업을 수행하거나 값을 계산하는 문장집합</h2>
+    <input type="button" value="sum" onclick="sum()">
+    <input type="button" value="minus" onclick="minus(7,3)">
+    <input type="button" value="multi" onclick="multi(7,3)">
+    <input type="button" value="divide" onclick="divide(6,3)">
+
+
+    <div id="result">결과값</div>
+</body>
+    
+<script>
+    var a =3;
+    var b = 4;
+
+    function sum(){
+        document.getElementById("result").innerHTML = a+b;
+    }
+    console.log(a+b);
+
+
+    function minus(c,d){
+        document.getElementById("result").innerHTML = c-d;
+    }
+    // 파라미터(매개변수) : 괄호 안에 넣어주는 데이터
+    // 매개변수는 해당 함수에서만 사용 가능
+
+    function multi(){
+        document.getElementById("result").innerHTML = a*b;
+    }
+
+    function divide(e,f){
+        document.getElementById("result").innerHTML = e/f;
+    }
+
+</script>
+</html>
