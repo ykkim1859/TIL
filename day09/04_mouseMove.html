@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 위치</title>
+</head>
+<body>
+    <h2>mouse position : <span id="pos1"></span></h2>
+    <h2>mouse position : <span id="pos2"></span></h2>
+</body>
+<script>
+    // 요소.addEventListner(event, function);
+
+    document.addEventListener("mousemove",mousemovE);
+
+    function mousemovE(move){
+        // screen : 모니터 기준
+        // client : 브라우저 기준
+        
+        document.getElementById("pos1").innerHTML = "브라우저(client) X : " + move.clientX + ", Y : " + move.clientY;
+
+        document.getElementById("pos2").innerHTML = "모니터(screen) X : " + move.screenX + ", Y : " + move.screenY;
+    }
+
+</script>
+</html>

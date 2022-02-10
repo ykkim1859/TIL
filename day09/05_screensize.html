@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크린 크기</title>
+</head>
+<body>
+    <h2 id="winSize"></h2>
+    <h2 id="screenSize"></h2>
+    <h2 id="availSize"></h2>
+
+    
+</body>
+<script>
+    let ww = window.innerWidth;
+    let wh = window.innerHeight;
+    
+    let sw = screen.width;
+    let sh = screen.height;
+
+    let aw = screen.availWidth;
+    let ah = screen.availHeight;
+
+    document.getElementById("winSize").innerHTML = "브라우저 사이즈 : " + ww + "x" + wh; 
+    document.getElementById("screenSize").innerHTML = "모니터 사이즈 : " + sw + "x" + sh; 
+    document.getElementById("availSize").innerHTML = "모니터 사이즈 (작업표시줄 제외) : " + aw + "x" + ah;
+
+    // let h2 = documnet.getElementsByTagName("h2");
+
+    // h2[0].innerHTML = "브라우저 사이즈 : " + ww + "x" + wh; 
+    // h2[1].innerHTML = "모니터 사이즈 : " + sw + "x" + sh; 
+    // h2[2].innerHTML = "모니터 사이즈 (작업표시줄 제외) : " + aw + "x" + ah;
+
+    
+    // console.log(h2);
+</script>
+</html>

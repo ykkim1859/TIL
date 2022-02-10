@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="mouse" onmouseover="mouseEvent('over')" onmouseout="mouseEvent('out')">
+
+    </div>
+
+    <fieldset>
+        <legend>오늘의 날짜</legend>
+        <h3 id="now"></h3>
+        <button onclick="getDay()">현재 시간</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>자동차 선택</legend>
+        <h2 id="typing"></h2>
+        <input id="keyboard" type="text" onkeydown="keyEvent('down')" onkeyup="keyEvent('up')">
+
+        <select id="myCar" onchange="carSel()">
+            <option>=====</option>
+            <option>현대</option>
+            <option>기아</option>
+            <option>테슬라</option>
+            <option>벤츠</option>
+        </select>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>onchange() 확인하기</legend>
+        <input type="text" id="typ1" onchange="change()">
+        <h2 id="typ2"></h2>
+    </fieldset>
+
+</body>
+
+<script>
+    // 1. onload : 브라우저가 모든 페이지를 로딩한 후 실행
+    // 2. onmouseover : 마우스가 영역 위로 올라올 경우 실행
+    // 3. onmouseout : 마우스가 영역 밖으로 벗어날 경우 실행
+    // 4. onclick : 마우스를 클릭할 경우 실행
+    // 5. onkeydown : 키보드의 키를 눌렀을 경우 실행 
+    // 6. onkeyup : 눌린 키가 떨어졌을 경우 실행
+    // 7. onchange : 요소에서 변경이 있을 경우
+
+    function mouseEvent(evt){
+        if(evt=="over"){
+            document.getElementById("mouse").innerHTML = "mouse over!";
+        } else if(evt=="out"){
+            document.getElementById("mouse").innerHTML = "mouse out!";
+        }
+    }
+
+    function getDay(){
+        document.getElementById("now").innerHTML = Date();  
+        // 내용 뒤에 () 있으면 함수로 보면 됨
+        // Date() : Thu Feb 10 2022 09:27:59 GMT+0900 (한국 표준시)
+    }
+
+    function keyEvent(evt){
+        if(evt=="down"){
+            document.getElementById("typing").innerHTML = "key down!";
+        } else if(evt=="up"){
+            document.getElementById("typing").innerHTML = "key up!";
+            let msg = document.getElementById("keyboard").value;
+            document.getElementById("typing").innerHTML = msg;
+        }
+    }
+
+    function carSel(){
+        let myCar = document.getElementById("myCar").value;
+        document.getElementById("typing").innerHTML = myCar;
+    }
+
+    function change(){
+        let msg = document.getElementById("typ1").value;
+        document.getElementById("typ2").innerHTML = msg; //html안의 typ2를 메시지로 출력
+    }
+
+</script>
+</html>

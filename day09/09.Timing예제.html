@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timing 예제</title>
+</head>
+<body onload="onLoad()">
+    <h2><span id="count">5</span>초 후에 다음 페이지로 이동합니다.</h2>
+</body>
+<script>
+    // 페이지가 로딩될 때 5초 후에 daum 페이지로 이동합니다. 라는 메시지가 뜨고
+    // 1초씩 줄어들고, 0초가 되면 페이지가 이동되는 웹페이지 작성하기 (2가지 방법 있음)
+
+
+
+        // 1. script에서 setInterval()과 setTimeout() 실행
+        let cnt = 5;        //count / 단순 숫자 변수
+        let count = document.getElementById("count");       // body부분에서 id="count"인 요소 / 숫자 표시되는 부분
+
+        setInterval(function(){
+            cnt--;
+            count.innerHTML = cnt;
+        },1000);     
+        // setInterval : 일정 시간 간격을 두고 함수 실행
+        // 1초마다 {} 실행
+
+        setTimeout(function(){
+            alert('페이지가 이동됩니다.');
+            location.href="http://www.daum.net";
+        },5000);
+        // setTimeout : 일정 시간이 지난 후 함수 실행
+        // 5초 후에 {} 1번 실행
+       
+
+
+        // 2. onload 이용해서 function에 담기
+        function onLoad(){
+            setInterval(function(){
+            cnt--;
+            count.innerHTML = cnt;
+        },1000);     
+        // 1초마다 {} 실행
+
+        setTimeout(function(){
+            alert('페이지가 이동됩니다.');
+            location.href="http://www.daum.net";
+        },5000);
+        //  5초 후에 {} 1번 실행
+        }
+
+
+</script>
+</html>

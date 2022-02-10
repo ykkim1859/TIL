@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lotto번호 생성기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>이번 주 로또 당첨번호</h2>
+
+    <div class="number"></div>
+    <div class="number"></div>
+    <div class="number"></div>
+    <div class="number"></div>
+    <div class="number"></div>
+    <div class="number"></div>
+    <div class="number"></div>
+
+    <button id="btn">번호 생성</button>
+</body>
+<script>
+
+    let lotto = [0, 0, 0, 0, 0, 0, 0];      // 크기가 7인 배열 생성
+    let i = 0;
+
+    let number = document.getElementsByClassName("number");     // class name이 "number"인 요소들을 number 안에 모음
+
+    let btn = document.getElementById("btn");
+    btn.addEventListener("click",result);       // id="btn"요소(버튼) 클릭했을 때 result함수 실행
+
+    function result(){
+        if(i > 6){
+            alert('더 이상 입력할 수 없습니다.');
+        } else{
+            lotto[i] = randomRange(1,45);
+            number[i].innerHTML = lotto[i]; 
+            i++;
+        }
+    }
+
+    function randomRange(min, max){
+        // var lotto = Math.floor(Math.random() * 45 + 1);
+        let rnd = Math.floor(Math.random() * max + min);
+
+        for(let j in lotto){
+            if(lotto[j]==rnd){
+                // 중복됐다면 -> randomRange(min, max) 함수 다시 실행
+                console.log("중복!!" + rnd + "번째 번호에서 중복!!");
+                return randomRange(min, max)
+            } else if(lotto[j]==lotto[j-1]){
+                console.log("중복!!" + rnd + "번째 번호에서 중복!!");
+                return randomRange(min, max)
+            } else{
+                return rnd;
+                // 중복되지 않았다면 -> random값 출력
+                }
+            }
+    }
+ 
+    // 숫자 나오는것만 확인하기!!!
+
+</script>
+</html>
